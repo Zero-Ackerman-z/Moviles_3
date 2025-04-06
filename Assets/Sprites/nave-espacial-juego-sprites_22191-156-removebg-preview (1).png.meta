@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: 398a9f6979fc1194bb5cf963776b41ca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_0
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 646
+        width: 108
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d1a9de36b3dd44baf3bb2b83f5af68
+      internalID: -815859687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_1
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 650
+        width: 131
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1574e8b5c1f96fa47b30c016976a9f34
+      internalID: -1851267573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_2
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 648
+        width: 114
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dd16f59ee7c96418a320eca393e306
+      internalID: -2063560869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_3
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 530
+        width: 243
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc8bcf3bf9a19545a51c7815d461a63
+      internalID: -1237332179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 648
+        width: 136
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a388ffd6b7772478621c19007a8e94
+      internalID: -158575684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 505
+        width: 231
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040e2ad403d27054dbd6f2d34c7a5413
+      internalID: 271863277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 530
+        width: 281
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a202532d24c7484bb30384210c1a1c8
+      internalID: 1747420011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_7
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 494
+        width: 215
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24d5af40f544de41a3246fa146f0f40
+      internalID: -449601512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 290
+        width: 394
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d60662b5e5602241a7f528a229e62bf
+      internalID: -254357009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_11
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 294
+        width: 363
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c677037517ef2b41a8c75e658d33e9a
+      internalID: -128546844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 431
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e94d4b72f3bdb4d99fcd97c8db92d5
+      internalID: 775930390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nave-espacial-juego-sprites_22191-156-removebg-preview (1)_14
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 424
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54fb131dcc34c341842ec96538cba73
+      internalID: -930901089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_0: -815859687
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_1: -1851267573
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_10: -724123901
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_11: -128546844
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_12: 775930390
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_13: -1310925565
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_14: -930901089
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_15: 212420485
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_2: -2063560869
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_3: -1237332179
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_4: -158575684
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_5: 271863277
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_6: 1747420011
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_7: -449601512
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_8: -1792963729
+      nave-espacial-juego-sprites_22191-156-removebg-preview (1)_9: -254357009
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
