@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;  
-    public float spawnInterval = 2f; 
+    public float spawnInterval; 
     public float spawnYMin = -4f;  
     public float spawnYMax = 4f;    
     public Transform spawnPoint;   

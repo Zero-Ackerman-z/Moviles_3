@@ -12,14 +12,32 @@ public class NaveController : MonoBehaviour
     [Header("Movement Settings")]
     public float velocidadMovimiento = 5f;    
     public float limiteSuperior = 4.5f;       
-    public float limiteInferior = -4.5f;      
+    public float limiteInferior = -4.5f;
+    private SpriteRenderer spriteRenderer; 
 
     private void Awake()
     {
         acceleratorMovement = GetComponent<AcceleratorMovement>();
         gyroscopeMovement = GetComponent<GyroscopeMovement>();
         playerLife = GetComponent<PlayerLife>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("No se encontró un SpriteRenderer en los hijos.");
+        }
 
+    }
+    public void ActualizarVisual()
+    {
+        if (playerData != null && spriteRenderer != null)
+        {
+            spriteRenderer.sprite = playerData.naveSprite;
+            Debug.Log("Sprite asignado correctamente: " + playerData.naveSprite.name);
+        }
+        else
+        {
+            Debug.LogError("PlayerData o SpriteRenderer es nulo en ActualizarVisual");
+        }
     }
 
     private void Update()
