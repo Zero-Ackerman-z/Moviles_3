@@ -5,14 +5,21 @@ using UnityEngine;
 public class AcceleratorMovement : MonoBehaviour
 {
     [Header("Accelerometer Settings")]
+<<<<<<< Updated upstream
     public bool useAccelerator = true;  // Si se debe usar el acelerómetro
     public float acelerometroSensibilidad = 1.0f; // Sensibilidad para suavizar el movimiento
 
     // Obtiene el movimiento vertical a partir del acelerómetro
+=======
+    public bool useAccelerator = true;  
+    public float acelerometroSensibilidad = 1.0f; 
+
+>>>>>>> Stashed changes
     public float GetVerticalMovement()
     {
         if (useAccelerator)
         {
+<<<<<<< Updated upstream
             // Obtiene el valor del acelerómetro en el eje Y
             float aceleracionY = Input.acceleration.y;
 
@@ -25,5 +32,16 @@ public class AcceleratorMovement : MonoBehaviour
             return aceleracionY;  // Retorna la aceleración en el eje Y
         }
         return 0f;  // Si no se usa, no mueve la nave
+=======
+            float aceleracionY = Input.acceleration.y;
+
+            aceleracionY *= acelerometroSensibilidad;
+
+            Debug.Log("Acelerómetro - Aceleración Y: " + aceleracionY);
+
+            return aceleracionY;  
+        }
+        return 0f;  
+>>>>>>> Stashed changes
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [Header("Score Settings")]
     public float puntosPorSegundo = 10f;  // Cuántos puntos se suman por segundo
     private float puntos = 0f;  // Puntos acumulados
@@ -36,3 +37,15 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Puntos: " + puntos.ToString("F0");  // "F0" muestra sin decimales
     }
 }
+=======
+    public ScoreSO scoreData;  
+
+    public PlayerDataSO playerData;  
+    void Update()
+    {
+        scoreData.AumentarPuntos((int)(playerData.ScoringSpeed * Time.deltaTime));
+    }
+}
+
+
+>>>>>>> Stashed changes
