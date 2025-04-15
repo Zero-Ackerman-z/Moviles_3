@@ -28,6 +28,11 @@ public class ScoreManager : MonoBehaviour
             yield return new WaitForSeconds(1f); 
         }
     }
+    public void AgregarPuntos(int puntos)
+    {
+        scoreData.AumentarPuntos(puntos);
+        scoreText.text = $"Puntos: {scoreData.puntuacion}";
+    }
 }
 
 

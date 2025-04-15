@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;  
+    [Header("Enemy Settings")]
+    public GameObject[] ObjectsPrefab ;  
     public float spawnInterval; 
     public float spawnYMin = -4f;  
-    public float spawnYMax = 4f;    
+    public float spawnYMax = 4f;
+    [Header("Spawn Point")]
     public Transform spawnPoint;   
 
     private void Start()
@@ -17,9 +19,13 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
+        if (ObjectsPrefab.Length == 0) return;
         float spawnPosY = Random.Range(spawnYMin, spawnYMax);
         Vector3 spawnPosition = new Vector3(spawnPoint.position.x, spawnPosY, spawnPoint.position.z);
 
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        int randomIndex = Random.Range(0, ObjectsPrefab.Length);  // Elige un prefab al azar
+        GameObject selectedEnemy = ObjectsPrefab[randomIndex];
+
+        Instantiate(selectedEnemy, spawnPosition, Quaternion.identity);
     }
 }

@@ -70,6 +70,8 @@ public class NaveController : MonoBehaviour
         if (other.tag == "Obstacle" || other.tag == "Enemy" || other.tag == "Projectile")
         {
             playerLife.GetDamage(1);
+            StaticObjectPooling.ObjectReturn(gameObject);
+
         }
     }
 }

@@ -2727,7 +2727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useGyroscope: 1
-  giroscopioSensibilidad: 0.5
+  giroscopioSensibilidad: 1
 --- !u!114 &3107521087956953466
 MonoBehaviour:
   m_ObjectHideFlags: 0

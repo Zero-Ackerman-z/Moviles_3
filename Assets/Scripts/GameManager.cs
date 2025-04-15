@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreFinalText;
     [SerializeField] private TextMeshProUGUI naveNombreText;
 
+    public StaticObjectPooling enemyPooling;
+    public Transform enemyParentTransform;
+    public StaticObjectPooling ObtaclePooling;
+    public Transform ObtacleParentTransform;
+
     public ScoreSO scoreData;
     public GameObject naveJugador;           
     public GameObject enemySpawner;          
@@ -15,6 +20,14 @@ public class GameManager : MonoBehaviour
     public GameObject panelResultados;
     public GameObject panelSelector;
 
+    public float spawnYMin = -4f;  // Rango mínimo en Y para la instanciación
+    public float spawnYMax = 4f;
+    private void Start()
+    {
+        StaticObjectPooling.SetUp(enemyParentTransform, enemyPooling);
+        StaticObjectPooling.SetUp(ObtacleParentTransform, ObtaclePooling);
+
+    }
     public void IniciarJuego(PlayerDataSO playerData)
     {
         naveJugador.SetActive(true);
@@ -77,6 +90,14 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(EsperarYReiniciar(5f));
 
+    }
+    public void SpawnEnemy()
+    {
+        float spawnY = Random.Range(spawnYMin, spawnYMax); 
+        Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, 0); 
+
+        GameObject enemy = StaticObjectPooling.GetObject();
+        enemy.transform.position = spawnPosition;
     }
 
 }
