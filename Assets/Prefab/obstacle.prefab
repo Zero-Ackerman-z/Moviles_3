@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4938131499330488784}
   - component: {fileID: 1822477494285787277}
   - component: {fileID: -2399929291745337626}
-  - component: {fileID: 1252053847027265644}
+  - component: {fileID: -1924786185003951446}
   m_Layer: 0
   m_Name: obstacle
   m_TagString: Obstacle
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2012896582, guid: 33538a627b6b60c4abf265cee229a84d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5418928, g: 0.42830187, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1252053847027265644
+--- !u!114 &-1924786185003951446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2766285646203210564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b869769e6c2c84d95b1e2bd5ce18b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5959eb2b166b7db4796611113e83d016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  lifeTime: 5
+  myRigidbody: {fileID: -2399929291745337626}
+  speed: 4

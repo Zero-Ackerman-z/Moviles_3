@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a98820a1bdd8284a8385393fd95280f, type: 3}
-  m_Name: ObtacleObjectPooling 1
+  m_Script: {fileID: 11500000, guid: 2b20675d0b2b64d4391e79f66b9f6002, type: 3}
+  m_Name: Enemy1ObjectPooling
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
+  objectPrefab: {fileID: 2766285646203210564, guid: 122c22079128ce94b8bcc9c19f84a4ad, type: 3}
+  poolID: 1

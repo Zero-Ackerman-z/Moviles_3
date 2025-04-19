@@ -7,27 +7,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreFinalText;
     [SerializeField] private TextMeshProUGUI naveNombreText;
-
-    public StaticObjectPooling enemyPooling;
-    public Transform enemyParentTransform;
-    public StaticObjectPooling ObtaclePooling;
-    public Transform ObtacleParentTransform;
+    [SerializeField] private TextMeshProUGUI highScoreText;
 
     public ScoreSO scoreData;
-    public GameObject naveJugador;           
+    public GameObject naveJugador;
     public GameObject enemySpawner;          
     public GameObject scoreManager;
     public GameObject panelResultados;
     public GameObject panelSelector;
 
-    public float spawnYMin = -4f;  // Rango mínimo en Y para la instanciación
-    public float spawnYMax = 4f;
-    private void Start()
-    {
-        StaticObjectPooling.SetUp(enemyParentTransform, enemyPooling);
-        StaticObjectPooling.SetUp(ObtacleParentTransform, ObtaclePooling);
-
-    }
     public void IniciarJuego(PlayerDataSO playerData)
     {
         naveJugador.SetActive(true);
@@ -38,7 +26,10 @@ public class GameManager : MonoBehaviour
             controller.playerData = playerData;
             controller.ActualizarVisual();
         }
-
+        if (naveJugador.TryGetComponent(out PlayerShooter shooting))
+        {
+            shooting.AsignarDatos(playerData);
+        }
         // Vida
         if (naveJugador.TryGetComponent(out PlayerLife vida))
         {
@@ -50,6 +41,8 @@ public class GameManager : MonoBehaviour
         // Score
         if (scoreManager.TryGetComponent(out ScoreManager score))
             score.AsignarDatos(playerData);
+       
+
     }
     public void MostrarResultados(ScoreSO scoreData, string nombreNave)
     {
@@ -58,6 +51,11 @@ public class GameManager : MonoBehaviour
 
         if (scoreFinalText != null)
             scoreFinalText.text = "Puntaje final: " + scoreData.puntuacion;
+        if (highScoreText != null)
+        {
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+            highScoreText.text = "Mejor puntaje: " + highScore;
+        }
     }
     public void ReiniciarJuego()
     {
@@ -86,18 +84,16 @@ public class GameManager : MonoBehaviour
         panelResultados.SetActive(true);
         if (naveJugador.TryGetComponent(out NaveController controller))
         {
+
             MostrarResultados(scoreData, controller.playerData.naveName);
         }
+        if (scoreManager.TryGetComponent(out ScoreManager sm))
+        {
+            sm.GuardarHighScore();
+        }
+
         StartCoroutine(EsperarYReiniciar(5f));
 
-    }
-    public void SpawnEnemy()
-    {
-        float spawnY = Random.Range(spawnYMin, spawnYMax); 
-        Vector3 spawnPosition = new Vector3(transform.position.x, spawnY, 0); 
-
-        GameObject enemy = StaticObjectPooling.GetObject();
-        enemy.transform.position = spawnPosition;
     }
 
 }

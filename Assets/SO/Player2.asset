@@ -16,4 +16,5 @@ MonoBehaviour:
   MaxLife: 10
   MovementSpeed: 5
   ScoringSpeed: 1
+  Cadencia: 0.5
   naveSprite: {fileID: -329845632, guid: 624a3b6a3c51c64468a023d02187a4d6, type: 3}

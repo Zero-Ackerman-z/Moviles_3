@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 792a5366999393d4cbaf094dd51690a5, type: 3}
-  m_Name: PlayerData0
+  m_Script: {fileID: 11500000, guid: 0ee6bd13578bc614eb2fc0191c59cc8e, type: 3}
+  m_Name: BulletObjectPooling
   m_EditorClassIdentifier: 
-  naveName: 'square '
-  MaxLife: 10
-  MovementSpeed: 5
-  ScoringSpeed: 1
-  Cadencia: 0.1
-  naveSprite: {fileID: -443858956, guid: 624a3b6a3c51c64468a023d02187a4d6, type: 3}
+  objectPrefab: {fileID: 3364111516457534193, guid: e96e82f5be40b8042837333093924988, type: 3}

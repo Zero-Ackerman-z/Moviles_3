@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed = 3f; 
-    public float lifeTime = 5f;
-
+    [SerializeField] private Rigidbody2D myRigidbody;
+    [SerializeField] private float speed;
     private void OnEnable()
     {
-        CancelInvoke();
-        Invoke(nameof(ReturnToPool), lifeTime);  // Devolvemos al pool después de 'lifeTime' segundos
-    }
+        if (myRigidbody == null)
+            myRigidbody = GetComponent<Rigidbody2D>();
 
-    private void OnDisable()
-    {
-        CancelInvoke();
+        myRigidbody.velocity = Vector2.left * speed;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" || collision.tag == "Wall")
+        {
+            StaticObjectPooling.ObjectReturn(gameObject);
 
-    void Update()
-    {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
-    }
-    private void ReturnToPool()
-    {
-        StaticObjectPooling.ObjectReturn(gameObject);
+        }
     }
 }

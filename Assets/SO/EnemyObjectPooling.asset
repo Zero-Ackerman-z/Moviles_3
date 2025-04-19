@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a98820a1bdd8284a8385393fd95280f, type: 3}
   m_Name: EnemyObjectPooling
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 0}
+  objectPrefab: {fileID: 2766285646203210564, guid: 122c22079128ce94b8bcc9c19f84a4ad, type: 3}

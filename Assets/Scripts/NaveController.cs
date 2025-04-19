@@ -27,6 +27,7 @@ public class NaveController : MonoBehaviour
         }
 
     }
+    
     public void ActualizarVisual()
     {
         if (playerData != null && spriteRenderer != null)
@@ -50,6 +51,8 @@ public class NaveController : MonoBehaviour
         {
             HandleGyroscopeMovement();
         }
+
+       
     }
 
     private void HandleAccelerometerMovement()
@@ -67,11 +70,9 @@ public class NaveController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Obstacle" || other.tag == "Enemy" || other.tag == "Projectile")
+        if (other.tag == "Obstacle" || other.tag == "Enemy")
         {
             playerLife.GetDamage(1);
-            StaticObjectPooling.ObjectReturn(gameObject);
-
         }
     }
 }

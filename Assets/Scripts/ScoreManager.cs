@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,6 +10,16 @@ public class ScoreManager : MonoBehaviour
     public PlayerDataSO playerData;
     public TextMeshProUGUI scoreText;
     private Coroutine scoreCoroutine;
+    private void OnEnable()
+    {
+        EventManager.OnPuntajeGanado += AgregarPuntos;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnPuntajeGanado -= AgregarPuntos;
+    }
+
     public void AsignarDatos(PlayerDataSO data)
     {
         playerData = data;
@@ -33,6 +44,22 @@ public class ScoreManager : MonoBehaviour
         scoreData.AumentarPuntos(puntos);
         scoreText.text = $"Puntos: {scoreData.puntuacion}";
     }
+    public void GuardarHighScore()
+    {
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (scoreData.puntuacion > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", scoreData.puntuacion);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public int ObtenerHighScore()
+    {
+        return PlayerPrefs.GetInt("HighScore", 0);
+    }
+
 }
 
 
