@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Lab5/SplashScreen.unity
+    guid: 2bf1f9458d2295344adc4ee1dfeca50a
+  - enabled: 1
+    path: Assets/Scenes/Lab5/Menu.unity
+    guid: 26b4f517f52734d47b6db25edcdb28dc
+  - enabled: 1
+    path: Assets/Scenes/Lab5/CharacterSelect.unity
+    guid: 922697d54a4bff24683b787a8bb78139
+  - enabled: 1
+    path: Assets/Scenes/Lab5/Game.unity
+    guid: 454476eab82582b45880b684b275efb6
+  - enabled: 1
+    path: Assets/Scenes/Lab5/Results.unity
+    guid: 8cb93e59efe8f4b448d170661fb30577
   m_configObjects: {}

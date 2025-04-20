@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Assets.Scripts;
 public class CharacterSelection : MonoBehaviour
 {
     public PlayerDataSO[] navesDisponibles; 
     public Image naveSeleccionadaImagen;   
     public TextMeshProUGUI nombreNaveText;           
     public PlayerDataSO playerLifeSO;
-    public GameObject panelSelector;
-    public GameManager gameManager;
+    //public GameObject panelSelector;
+    //public GameManager gameManager;
 
     private PlayerDataSO naveSeleccionada;
     private int currentIndex = 0;
     private float tapTime;
     private const float doubleTapDelay = 0.3f;
     private bool isWaitingForSecondTap = false;
+    
     void Start()
     {
         SeleccionarNave(currentIndex);
@@ -59,7 +61,11 @@ public class CharacterSelection : MonoBehaviour
     void ConfirmarSeleccion()
     {
         playerLifeSO = naveSeleccionada;
-        panelSelector.SetActive(false);
-        gameManager.IniciarJuego(naveSeleccionada);
+        PlayerPrefs.SetString("NaveSeleccionada", naveSeleccionada.naveName);
+
+        SceneGlobalManager.Instance.CargarEscenaGameConResults(naveSeleccionada);
+        //PanelSelector.SetActive(false);
+        //gameManager.IniciarJuego(naveSeleccionada);
     }
+
 }

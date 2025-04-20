@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Enemy1ObjectPooling
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 2766285646203210564, guid: 122c22079128ce94b8bcc9c19f84a4ad, type: 3}
-  poolID: 1
+  poolID: obtacle

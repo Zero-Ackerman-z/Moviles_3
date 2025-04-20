@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,17 +6,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    /*
     [SerializeField] private TextMeshProUGUI scoreFinalText;
     [SerializeField] private TextMeshProUGUI naveNombreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
-
+    */
     public ScoreSO scoreData;
     public GameObject naveJugador;
     public GameObject enemySpawner;          
     public GameObject scoreManager;
-    public GameObject panelResultados;
-    public GameObject panelSelector;
+    //public GameObject panelResultados;
+    //public GameObject panelSelector;
+    void OnEnable()
+    {
+        SceneGlobalManager.Instance.OnGameStarted += IniciarJuego;
+        SceneGlobalManager.Instance.OnGameEnded += TerminarJuego;
+    }
 
+    void OnDisable()
+    {
+        SceneGlobalManager.Instance.OnGameStarted -= IniciarJuego;
+        SceneGlobalManager.Instance.OnGameEnded -= TerminarJuego;
+    }
     public void IniciarJuego(PlayerDataSO playerData)
     {
         naveJugador.SetActive(true);
@@ -44,6 +56,7 @@ public class GameManager : MonoBehaviour
        
 
     }
+    /*
     public void MostrarResultados(ScoreSO scoreData, string nombreNave)
     {
         if (naveNombreText != null)
@@ -57,6 +70,7 @@ public class GameManager : MonoBehaviour
             highScoreText.text = "Mejor puntaje: " + highScore;
         }
     }
+    
     public void ReiniciarJuego()
     {
         panelSelector.SetActive(true);
@@ -66,14 +80,16 @@ public class GameManager : MonoBehaviour
         panelResultados.SetActive(false);
 
     }
+    
     private IEnumerator EsperarYReiniciar(float segundos)
     {
         yield return new WaitForSecondsRealtime(segundos); 
-        Time.timeScale = 1f; 
-
-        ReiniciarJuego();
+        Time.timeScale = 1f;
+        SceneGlobalManager.Instance.IrASeleccionDeNave();
+        //ReiniciarJuego();
     }
-
+}
+    */
     public void TerminarJuego()
     {
         Debug.Log("El juego ha terminado. Mostrando resultados...");
@@ -81,19 +97,20 @@ public class GameManager : MonoBehaviour
         naveJugador.SetActive(false);
         enemySpawner.SetActive(false);
         scoreManager.SetActive(false);
-        panelResultados.SetActive(true);
+        //panelResultados.SetActive(true);
         if (naveJugador.TryGetComponent(out NaveController controller))
         {
-
-            MostrarResultados(scoreData, controller.playerData.naveName);
+            SceneGlobalManager.Instance.MostrarResultados(scoreData, controller.playerData.naveName);
+            //MostrarResultados(scoreData, controller.playerData.naveName);
         }
         if (scoreManager.TryGetComponent(out ScoreManager sm))
         {
             sm.GuardarHighScore();
         }
 
-        StartCoroutine(EsperarYReiniciar(5f));
+        //StartCoroutine(EsperarYReiniciar(5f));
 
     }
+
 
 }

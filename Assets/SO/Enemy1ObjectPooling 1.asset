@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b20675d0b2b64d4391e79f66b9f6002, type: 3}
   m_Name: Enemy1ObjectPooling 1
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 2766285646203210564, guid: 122c22079128ce94b8bcc9c19f84a4ad, type: 3}
-  poolID: 1
+  objectPrefab: {fileID: 2766285646203210564, guid: c24fc6d1b38e8e8478a8202a24b92b04, type: 3}
+  poolID: enemy
