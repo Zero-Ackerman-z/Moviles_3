@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -144,7 +144,7 @@ TextureImporter:
         width: 77
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,6 +152,48 @@ TextureImporter:
       bones: []
       spriteID: e06f0985907ada941a2034890daff0c9
       internalID: -2012896582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Just Shapes & Beats Customs - Bosses 1-6 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 25
+        width: 34
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293a41150a3c2d24c8a8098c6043c114
+      internalID: 2129373296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom Edited - Just Shapes & Beats Customs - Bosses 1-6 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 394
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fe3c947eb919b45bd946e64b748eb8
+      internalID: 915286730
       vertices: []
       indices: 
       edges: []
@@ -168,6 +210,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Custom Edited - Just Shapes & Beats Customs - Bosses 1-6 (1)_0: -2012896582
+      Custom Edited - Just Shapes & Beats Customs - Bosses 1-6 (1)_1: 2129373296
+      Custom Edited - Just Shapes & Beats Customs - Bosses 1-6 (1)_2: 915286730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

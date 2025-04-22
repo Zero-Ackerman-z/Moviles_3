@@ -517,8 +517,6 @@ MonoBehaviour:
   naveSeleccionadaImagen: {fileID: 2144915319}
   nombreNaveText: {fileID: 1545038615}
   playerLifeSO: {fileID: 11400000, guid: f25a12c1044b27f42884fe9e45465b4a, type: 2}
-  panelSelector: {fileID: 1227332631}
-  gameManager: {fileID: 0}
 --- !u!114 &1227332634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +670,7 @@ PrefabInstance:
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 2d83cb1f18977684da749760a06ef2ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 9e5a284addda3304ea9b906e4acfb08e, type: 2}
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_fontSizeBase
       value: 200
@@ -680,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3353235484267265344, guid: 2d83cb1f18977684da749760a06ef2ee, type: 2}
+      objectReference: {fileID: -4792719868458392369, guid: 9e5a284addda3304ea9b906e4acfb08e, type: 2}
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
@@ -811,6 +809,10 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e5a284addda3304ea9b906e4acfb08e, type: 2}
+    - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_fontStyle
       value: 3
       objectReference: {fileID: 0}
@@ -819,8 +821,16 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4792719868458392369, guid: 9e5a284addda3304ea9b906e4acfb08e, type: 2}
+    - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245083419075391815, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6697948646986619275, guid: 375df456e9df4c64eb444f36142f5571, type: 3}
       propertyPath: m_Pivot.x
