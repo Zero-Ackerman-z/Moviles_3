@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -67,5 +65,4 @@ public class CharacterSelection : MonoBehaviour
         //PanelSelector.SetActive(false);
         //gameManager.IniciarJuego(naveSeleccionada);
     }
-
 }

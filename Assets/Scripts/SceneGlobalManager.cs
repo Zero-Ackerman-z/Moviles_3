@@ -38,7 +38,7 @@ namespace Assets.Scripts
 
         private IEnumerator CargarMenuDesdeSplash()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(6.5f);
             SceneManager.LoadSceneAsync(menuScene, LoadSceneMode.Single);
             OnSceneChanged?.Invoke();  // Invocar evento de cambio de escena
         }
