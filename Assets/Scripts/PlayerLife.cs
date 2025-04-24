@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using TMPro;
 using System;
+using System.Collections;
 public class PlayerLife : MonoBehaviour
 {
     public PlayerDataSO playerData;
@@ -17,6 +18,7 @@ public class PlayerLife : MonoBehaviour
     }
     public void GetDamage(int damage)
     {
+        Debug.Log("Daño recibido. Vida actual: " + CurrentLife);
         CurrentLife -= damage;
         if (CurrentLife <= 0)
         {

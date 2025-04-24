@@ -14,22 +14,25 @@ public class GameManager : MonoBehaviour
     public ScoreSO scoreData;
     public GameObject naveJugador;
     public GameObject enemySpawner;          
-    public GameObject scoreManager;
+    public GameObject scoreManager; 
+    private bool gameIsActive = false;
+
     //public GameObject panelResultados;
     //public GameObject panelSelector;
-    void OnEnable()
+    private void OnEnable()
     {
-        SceneGlobalManager.Instance.OnGameStarted += IniciarJuego;
-        SceneGlobalManager.Instance.OnGameEnded += TerminarJuego;
+        EventManager.OnGameStarted += IniciarJuego;
+        EventManager.OnGameEnded += TerminarJuego;
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
-        SceneGlobalManager.Instance.OnGameStarted -= IniciarJuego;
-        SceneGlobalManager.Instance.OnGameEnded -= TerminarJuego;
+        EventManager.OnGameStarted -= IniciarJuego;
+        EventManager.OnGameEnded -= TerminarJuego;
     }
     public void IniciarJuego(PlayerDataSO playerData)
     {
+        gameIsActive = true;
         naveJugador.SetActive(true);
         enemySpawner.SetActive(true);
         scoreManager.SetActive(true);
@@ -92,11 +95,18 @@ public class GameManager : MonoBehaviour
     */
     public void TerminarJuego()
     {
+        if (!gameIsActive) return;
+
         Debug.Log("El juego ha terminado. Mostrando resultados...");
         Time.timeScale = 0f; 
         naveJugador.SetActive(false);
         enemySpawner.SetActive(false);
         scoreManager.SetActive(false);
+        gameIsActive = false;
+
+        StartCoroutine(GameOverSequence());
+
+        /*
         //panelResultados.SetActive(true);
         if (naveJugador.TryGetComponent(out NaveController controller))
         {
@@ -107,9 +117,29 @@ public class GameManager : MonoBehaviour
         {
             sm.GuardarHighScore();
         }
-
+        */
         //StartCoroutine(EsperarYReiniciar(5f));
 
+    }
+    private IEnumerator GameOverSequence()
+    {
+        Time.timeScale = 0f;
+        // Mostrar resultados
+        if (naveJugador.TryGetComponent(out NaveController controller))
+        {
+            SceneGlobalManager.Instance.MostrarResultados(scoreData, controller.playerData.naveName);
+        }
+
+        if (scoreManager.TryGetComponent(out ScoreManager sm))
+        {
+            sm.GuardarHighScore();
+        }
+
+        yield return new WaitForSecondsRealtime(2f); // Tiempo para ver resultados
+        Time.timeScale = 1f;
+
+        // Volver a selección de personaje
+        SceneGlobalManager.Instance.IrASeleccionDeNave();
     }
 
 

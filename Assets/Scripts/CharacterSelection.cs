@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Assets.Scripts;
+using System;
 public class CharacterSelection : MonoBehaviour
 {
     public PlayerDataSO[] navesDisponibles; 
@@ -18,13 +19,32 @@ public class CharacterSelection : MonoBehaviour
     private float tapTime;
     private const float doubleTapDelay = 0.3f;
     private bool isWaitingForSecondTap = false;
-    
+    private bool seleccionConfirmada = false;
+
+    private void OnEnable()
+    {
+        EventManager.OnSceneChanged += () => SeleccionarNave(currentIndex);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnSceneChanged -= () => SeleccionarNave(currentIndex);
+    }
     void Start()
     {
-        SeleccionarNave(currentIndex);
+        if (navesDisponibles != null && navesDisponibles.Length > 0)
+        {
+            SeleccionarNave(currentIndex);
+        }
+        else
+        {
+            Debug.LogError("No hay naves disponibles asignadas");
+        }
     }
     void Update()
     {
+        if (seleccionConfirmada) return; // 🚫 Evita seguir detectando taps
+
         if (Input.GetMouseButtonDown(0))
         {
             if (isWaitingForSecondTap && (Time.time - tapTime) <= doubleTapDelay)
@@ -58,8 +78,9 @@ public class CharacterSelection : MonoBehaviour
         currentIndex = (currentIndex + 1) % navesDisponibles.Length;
         SeleccionarNave(currentIndex);
     }
-    void ConfirmarSeleccion()
+    private void ConfirmarSeleccion()
     {
+
         playerLifeSO = naveSeleccionada;
         PlayerPrefs.SetString("NaveSeleccionada", naveSeleccionada.naveName);
 

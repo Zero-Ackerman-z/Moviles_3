@@ -10,15 +10,14 @@ public class MenuInputHandler : MonoBehaviour
 
     private float pressTime;
     private bool isPressing = false;
-    void OnEnable()
+    private void OnEnable()
     {
-        SceneGlobalManager.Instance.OnSceneChanged += OnTap;
-;
+        EventManager.OnSceneChanged += OnTap;
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
-        SceneGlobalManager.Instance.OnSceneChanged -= OnTap;
+        EventManager.OnSceneChanged -= OnTap;
     }
 
     void Update()
