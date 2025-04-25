@@ -35,7 +35,7 @@ namespace Assets.Scripts
 
         private IEnumerator CargarMenuDesdeSplash()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(2.7f);
             SceneManager.LoadSceneAsync(menuScene, LoadSceneMode.Single);
             EventManager.InvokeSceneChanged();
         }
@@ -210,7 +210,7 @@ namespace Assets.Scripts
         {
             StartCoroutine(UnloadYVolver(menuScene));
         }
-
+        
         public void IrASeleccionDeNave()
         {
             StartCoroutine(UnloadYVolver(characterSelectScene));

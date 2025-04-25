@@ -98,7 +98,6 @@ public class GameManager : MonoBehaviour
         if (!gameIsActive) return;
 
         Debug.Log("El juego ha terminado. Mostrando resultados...");
-        Time.timeScale = 0f; 
         naveJugador.SetActive(false);
         enemySpawner.SetActive(false);
         scoreManager.SetActive(false);
@@ -124,7 +123,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator GameOverSequence()
     {
         Time.timeScale = 0f;
-        // Mostrar resultados
         if (naveJugador.TryGetComponent(out NaveController controller))
         {
             SceneGlobalManager.Instance.MostrarResultados(scoreData, controller.playerData.naveName);
@@ -135,10 +133,9 @@ public class GameManager : MonoBehaviour
             sm.GuardarHighScore();
         }
 
-        yield return new WaitForSecondsRealtime(2f); // Tiempo para ver resultados
+        yield return new WaitForSecondsRealtime(2f);
         Time.timeScale = 1f;
 
-        // Volver a selección de personaje
         SceneGlobalManager.Instance.IrASeleccionDeNave();
     }
 

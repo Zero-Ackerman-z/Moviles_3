@@ -67,7 +67,9 @@ public class MenuInputHandler : MonoBehaviour
 
     void OnLongPress()
     {
-        Debug.Log("Long Press detectado - salir al menú");
+        Debug.Log("Long Press detectado - salir del juego");
+        Application.Quit();
+
     }
-    
+
 }

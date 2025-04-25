@@ -43,7 +43,7 @@ public class CharacterSelection : MonoBehaviour
     }
     void Update()
     {
-        if (seleccionConfirmada) return; // 🚫 Evita seguir detectando taps
+        if (seleccionConfirmada) return; 
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -80,7 +80,7 @@ public class CharacterSelection : MonoBehaviour
     }
     private void ConfirmarSeleccion()
     {
-
+        seleccionConfirmada = true;
         playerLifeSO = naveSeleccionada;
         PlayerPrefs.SetString("NaveSeleccionada", naveSeleccionada.naveName);
 

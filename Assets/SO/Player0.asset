@@ -17,4 +17,4 @@ MonoBehaviour:
   MovementSpeed: 5
   ScoringSpeed: 1
   Cadencia: 1
-  naveSprite: {fileID: -450080932, guid: 624a3b6a3c51c64468a023d02187a4d6, type: 3}
+  naveSprite: {fileID: 1675416749, guid: 0eadefd2fcb2c5f48ab47424b988484e, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainColor: {r: 1, g: 0.1254902, b: 0.44313726, a: 1}
   ConstrastColor: {r: 0.79811317, g: 1, b: 0.9977793, a: 1}
-  TextColor: {r: 0.90943396, g: 0.90943396, b: 0.90943396, a: 1}
+  TextColor: {r: 1, g: 1, b: 1, a: 1}
