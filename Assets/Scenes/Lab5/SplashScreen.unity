@@ -372,6 +372,12 @@ MonoBehaviour:
   - sceneName: Game
     musicClip: {fileID: 8300000, guid: c9de790491975c4468726713caa37c49, type: 3}
   musicSource: {fileID: 1939100578}
+  sfxClips:
+  - name: Damage
+    clip: {fileID: 8300000, guid: 0344427cf58b94c42aa38de07d81ddaf, type: 3}
+  - name: CriticalDamage
+    clip: {fileID: 8300000, guid: 810c5d9d12344b349aaf9b30cc826d3f, type: 3}
+  sfxSource: {fileID: 1035031041}
 --- !u!4 &777445586
 Transform:
   m_ObjectHideFlags: 0

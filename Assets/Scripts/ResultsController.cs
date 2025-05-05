@@ -10,11 +10,15 @@ namespace Assets.Scripts
         [SerializeField] private TextMeshProUGUI scoreFinalText;
         [SerializeField] private TextMeshProUGUI naveNombreText;
         [SerializeField] private TextMeshProUGUI highScoreText;
+        private NotificationManager notificationManager;
+
         private bool yaSaliendo = false;
         private float tiempoPresionado = 1f;
         private float duracionParaSalir = 1f;
         public void ConfigurarResultados(ScoreSO scoreData, string nombreNave)
         {
+            int highScore = PlayerPrefs.GetInt("HighScore", 0);
+
             if (naveNombreText != null)
                 naveNombreText.text = "Nave usada: " + nombreNave;
 
@@ -23,8 +27,20 @@ namespace Assets.Scripts
 
             if (highScoreText != null)
             {
-                int highScore = PlayerPrefs.GetInt("HighScore", 0);
                 highScoreText.text = "Mejor puntaje: " + highScore;
+            }
+            notificationManager = FindObjectOfType<NotificationManager>();
+            if (notificationManager != null)
+            {
+                if (scoreData.puntuacion > highScore)
+                {
+                    PlayerPrefs.SetInt("HighScore", scoreData.puntuacion);
+                    notificationManager.EnviarNotificacionNuevoRecord(scoreData.puntuacion);
+                }
+                else
+                {
+                    notificationManager.EnviarNotificacionRondaTerminada(scoreData.puntuacion);
+                }
             }
             StartCoroutine(EsperarYReiniciar(10f)); 
 

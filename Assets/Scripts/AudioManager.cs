@@ -15,8 +15,22 @@ public class AudioManager : MonoBehaviour
         public AudioClip musicClip;
     }
 
+    [System.Serializable]
+    public class SFXClip
+    {
+        public string name;
+        public AudioClip clip;
+    }
+
+    [Header("Música por Escena")]
     public SceneMusic[] musicPerScene;
     public AudioSource musicSource;
+
+    [Header("Efectos de Sonido")]
+    public SFXClip[] sfxClips;
+    public AudioSource sfxSource;
+
+    private Dictionary<string, AudioClip> sfxDictionary;
 
     private void Awake()
     {
@@ -27,7 +41,8 @@ public class AudioManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); 
+        CrearDiccionarioSFX();
     }
 
     private void OnEnable()
@@ -70,6 +85,28 @@ public class AudioManager : MonoBehaviour
 
         Debug.LogWarning($"No se encontró música asignada para la escena: {sceneName}");
     }
+    private void CrearDiccionarioSFX()
+    {
+        sfxDictionary = new Dictionary<string, AudioClip>();
+        foreach (var sfx in sfxClips)
+        {
+            if (!sfxDictionary.ContainsKey(sfx.name))
+            {
+                sfxDictionary.Add(sfx.name, sfx.clip);
+            }
+        }
+    }
 
-    
+    public void PlaySFX(string name)
+    {
+        if (sfxDictionary.TryGetValue(name, out AudioClip clip))
+        {
+            sfxSource.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.LogWarning($"No se encontró el SFX con nombre: {name}");
+        }
+    }
+
 }

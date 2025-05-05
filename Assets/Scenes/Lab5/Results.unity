@@ -1174,6 +1174,7 @@ GameObject:
   - component: {fileID: 1603027413}
   - component: {fileID: 1603027412}
   - component: {fileID: 1603027414}
+  - component: {fileID: 1603027415}
   m_Layer: 5
   m_Name: Resultados
   m_TagString: Untagged
@@ -1261,6 +1262,18 @@ MonoBehaviour:
   scoreFinalText: {fileID: 791024828}
   naveNombreText: {fileID: 795685819}
   highScoreText: {fileID: 1980084498}
+--- !u!114 &1603027415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603027410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f377712b48ca82d4992fe593358e6dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1674605672
 PrefabInstance:
   m_ObjectHideFlags: 0

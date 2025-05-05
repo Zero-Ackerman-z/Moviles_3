@@ -20,10 +20,12 @@ public class PlayerLife : MonoBehaviour
     {
         Debug.Log("Daño recibido. Vida actual: " + CurrentLife);
         CurrentLife -= damage;
+        AudioManager.Instance.PlaySFX("Damage");
         if (CurrentLife <= 0)
         {
             CurrentLife = 0;
             OnGameOver?.Invoke();
+            AudioManager.Instance.PlaySFX("CriticalDamage");
             Debug.Log("¡Juego Terminado!");
         }
         UpdateLifeText();
